@@ -1,0 +1,53 @@
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      {{ with .Site.Copyright }}{{ . | markdownify}} &middot; {{ end }}
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+
+      &middot;
+
+      Site icon by
+      <a href="https://www.iconfinder.com/icons/2890588/ai_artificial_intelligence_brain_cloud_electronics_robotics_technology_icon" target="_blank" rel="noopener">Eucalyp Studio</a>
+      used under
+      <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>
+      / Added white fill in cloud
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+<!-- Citation modal -->
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{ i18n "btn_cite" }}</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> {{ i18n "btn_copy" }}
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> {{ i18n "btn_download" }}
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>

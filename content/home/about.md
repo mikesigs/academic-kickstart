@@ -10,31 +10,22 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval"
+    ".NET Development",
+    "Functional Programming",
+    "Front-End Web Development",
+    "Whatever shiny thing that has recently caught my attention"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Artificial Intelligence"
-  institution = "Stanford University"
-  year = 2012
+  course = "BS in Computer Science"
+  institution = "University of North Dakota"
+  year = 2013
 
-[[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
-
-[[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2008
- 
 +++
 
 # Biography
 
-Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Mike has been honing his craft as a software developer for over ten years, with a focus on Web-based .NET business applications. He has worked for a variety of clients, big and small, in industries ranging from Women's Fashion to Oil & Gas. He is passionate about learning, whether it's something brand new, or just new to him. Mike thrives on diving deeply into things and loading up on knowledge to share with friends and coworkers. He has a proven track record of guiding teams toward success on projects big and small. No matter what the role, Mike's easy-going style, and strong intellect make him a welcome addition to any team.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+When he's not moving pixels around, Mike enjoys spending time with his wife and 5-year old son. Having recently moved to a more hospitable place in Canada (he grew up in Winnipeg), Mike thoroughly enjoys spending time outside exploring his new city, hiking through the mountains, learning to ski, or simply relaxing in the backyard with friends.

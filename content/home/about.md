@@ -25,10 +25,11 @@ weight = 5
 +++
 # Biography
 
-Mike has been honing his craft as a software developer for over ten years, with a focus on Web-based .NET business applications. He has worked for a variety of clients, big and small, in industries ranging from oil & gas to women's fashion.
+I've been doing software development for over ten years now. I've stayed pretty focused on
+.NET, building business apps with ASP.NET at the core. I spent a few years quite enamoured with Angular.JS, striving to be a unicorn, full-stack dev. More recently I've just been digging the backend, building microservice-based applications with NServiceBus in AwS.
 
-He is passionate about learning, whether it's something brand new, or just new to him. Mike thrives on diving deeply into things and loading up on knowledge to share with friends and coworkers.
+One thing's for sure, I have a passion for learning, and a true love for code. I am happiest when exploring the nitty-gritty details of some new shiny technology, yet even moreso when sharing my knowledge with others.
 
-He has a proven track record of guiding teams toward success on projects big and small. No matter what the role, Mike's easy-going style, and strong intellect make him a welcome addition to any team.
+When I'm not moving bits and pixels around, I can be found spending time with family and friends. I recently moved to a more hospitable place in Canada (now in Calgary, used to be in Winnipeg), So I am thoroughly enjoying all that this new city and surrounding area has to offer. I'm currently learning to ski, and can't get enough of it!
 
-When he's not moving bits and pixels around, Mike enjoys spending time with his wife and 5-year old son. Having recently moved to a more hospitable place in Canada (he grew up in Winnipeg), Mike thoroughly enjoys spending time outside exploring, hiking through the mountains, learning to ski, or just chilling out with friends playing games.
+Well that's me. Thanks for visiting my blog. I hope you find what you're looking for!

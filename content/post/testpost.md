@@ -38,6 +38,8 @@ preview = true
 2. And a two
 3. and a four
 
+<!--more-->
+
 Let's see how some inline code looks `for x = 1 {}`
 
 And how about a code block with fences

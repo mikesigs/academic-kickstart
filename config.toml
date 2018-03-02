@@ -154,7 +154,7 @@ defaultContentLanguageInSubdir = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["site.css"]
+  custom_css = ["override.css"]
   custom_js  = []
 
   # Publication types.

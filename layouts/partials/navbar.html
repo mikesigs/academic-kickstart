@@ -14,7 +14,8 @@
       {{ end }}
       <a class="navbar-brand" href="{{ "/" | relLangURL }}">
         <img src="{{ printf "/img/%s" .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}">
-        <img src="{{ printf "/img/%s" .Site.Params.logoText | relURL }}" alt="{{ .Site.Title }}">
+        <!-- <img src="{{ printf "/img/%s" .Site.Params.logoText | relURL }}" alt="{{ .Site.Title }}"> -->
+        {{ .Site.Title }}
       </a>
     </div>
 

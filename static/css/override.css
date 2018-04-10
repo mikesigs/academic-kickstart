@@ -12,3 +12,8 @@
 .navbar-brand, .navbar-nav li a {
   font-size: 18px;
 }
+
+.article-style img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

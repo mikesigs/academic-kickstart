@@ -1,5 +1,5 @@
 +++
-title = "Index"
+title = "Showing the Current Git Repo Name and Branch in Your Cmder Tab"
 date = 2018-03-13T11:51:33-06:00
 draft = false
 

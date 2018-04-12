@@ -1,19 +1,19 @@
 +++
-title = "Building Azure Functions With F# and VS Code - Setup Your Environment"
+title = "Building Azure Functions With F# and VS Code - ## Setup Your Environment"
 date = 2018-03-08T22:32:30-07:00
 tags = ['Azure', 'F#', 'Azure Functions', 'Visual Studio Code']
 draft = true
 +++
 
-This is Step 1 in a [series of posts](../toc) where I walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.
+This is Step 1 in a [series of posts](../toc) where I will walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.
 I'll cover everything from what you need to install, all the way through creating the function, and deploying it to your Azure account.
 
-1. **[Setup](../1-setup)** :arrow_backward:
+1. **[Setup Your Environment](../1-setup)** :arrow_backward:
 2. [Create the Function App](../2-create-function-app)
 3. [Run the Function Locally](../3-running-locally)
 4. [Deploy the Function App to Azure](../4-deploy-to-azure)
 
-## Setup your environment
+## Setup Your Environment
 
 There are several ways to develop Azure Functions. You can choose to do everything in the Azure Portal, you can use the full blown Visual Studio, or you can use Visual Studio Code and the CLI. We'll be going the latter route.
 
@@ -25,9 +25,9 @@ This seems like a no brainer. But if you don't already have it, install [Visual 
 
 ### 2) Install F\#
 
-If you have Visual Studio installed, perhaps you included support for F#. If that's the case, you can skip this step. If not, then head over to [fsharp.org](http://fsharp.org/) and download the appropriate version for your system.
+If you have Visual Studio installed, perhaps you've already included support for F#. If that's the case, you can skip this step. If not, then head over to [fsharp.org](http://fsharp.org/) and download the appropriate version for your system.
 
-### 3) Install the Ionide plugins for Visual Studio Code
+### 3) Install the Ionide Plugins for Visual Studio Code
 
 If you've done any F# development in VS Code, then you almost certainly have these installed. If not, you'll soon come to learn that **Ionide is awesome!**
 

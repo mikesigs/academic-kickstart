@@ -5,10 +5,10 @@ tags = ['Azure', 'F#', 'Azure Functions', 'Visual Studio Code']
 draft = true
 +++
 
-This is Step 2 in a [series of posts](../toc) where I walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.
+This is Step 2 in a [series of posts](../toc) where I will walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.
 I'll cover everything from what you need to install, all the way through creating the function, and deploying it to your Azure account.
 
-1. [Setup](../1-setup)
+1. [Setup Your Environment](../1-setup)
 2. **[Create the Function App](../2-create-function-app)** :arrow_backward:
 3. [Run the Function Locally](../3-running-locally)
 4. [Deploy the Function App to Azure](../4-deploy-to-azure)
@@ -21,14 +21,14 @@ As I mentioned earlier, the **Azure Functions** extension doesn't support creati
 
 Open up your favorite console, and create a new directory for your project. I'm gonna call mine something really ~~lame~~ _fun_ like `HelloYou`, then I'll `cd` into it and run `func init`. You can also do this in one shot by specifying the directory name: `func init HelloYou`.
 
-You should now have a directory, initialized as a git repository, with two files: `host.json` and `local.settings.json`. There's also a `.gitignore` tailored for Azure Functions development.
+You should now have a directory initialized as a git repository with two files: `host.json` and `local.settings.json`. There's also a `.gitignore` tailored for Azure Functions development.
 
 ## Open the Project
 
 There's not much there yet. Just an empty Azure Functions project. Let's open up Visual Studio Code now and let the Azure Functions extension do it's thing.
 
 {{% alert info %}}
-To open the current directory in VS Code using the console type `code .`
+To open the current directory in VS Code from the console type `code .`
 {{% /alert %}}
 
 ### Azure Functions Extension Prompt
@@ -40,7 +40,7 @@ You should now be greeted by the following prompt from the Azure Functions exten
 Click **Yes** and [all of this will be yours](https://github.com/Microsoft/vscode-azurefunctions/blob/master/docs/project.md)!
 Granted, it's not _as_ benefitical for an F# project, but I still think it's worth it for the `Tasks.json` alone.
 
-After click **Yes**, VS Code will prompt you to select the default language for your project. Please select F# Script.
+After clicking **Yes**, VS Code will prompt you to select the default language for your project. Please select `F#Script`.
 
 ## Create a New Function
 
@@ -69,6 +69,15 @@ Okay, if you're like me, all this setup probably drove you crazy. And you're gla
 ### Holy Squigglies!
 
 The first thing you'll notice is VS Code throwing a lot of squigglies under everything. **So many undefined types!** Well, not really. You see, at runtime, the Azure Functions hosting environment automatically loads [a bunch of namespaces and assemblies](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-fsharp#referencing-external-assemblies) for you. Unfortunately, VS Code doesn't know anything about this. So to make VS Code happy you can add the following code to the beginning of `run.fsx`.
+
+Replace these lines:
+
+```fsharp
+#r "System.Net.Http"
+#r "Newtonsoft.Json"
+```
+
+With this:
 
 ```fsharp
 #if !COMPILED
@@ -151,7 +160,7 @@ Within the async workflow it:
 
 - Uses our injected logger to write some information to the console
 - Asynchronously reads the body of our http request into `jsonContent`
-- Uses Json.Net to deserialize `jsonContent` into a `Name` typed binding
+- Uses Json.NET to deserialize `jsonContent` into a `Name` typed binding
 - If all goes well it returns a `Task<HttpResponseMessage>` with status 200, and some JSON expressing our sincerest greetings to the calling client
 - If the JSON deserialization goes horrible awry, then it returns a 400 BadRequest with absolutely no detail whatsover. Because hackers.
 - Finally, at the very end it's all piped into the `Async.StartAsTask` function to begin the async workflow

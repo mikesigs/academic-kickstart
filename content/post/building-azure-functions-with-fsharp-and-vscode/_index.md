@@ -2,7 +2,7 @@
 title = "Building Azure Functions With F# Script and Visual Studio Code"
 date = 2018-04-12
 tags = ['Azure', 'FSharp', 'Azure Functions', 'Visual Studio Code']
-categories = ['Functional Programming', 'Serverless', 'Azure', '.NET', 'F#']
+categories = ['Functional Programming', 'Serverless', 'Azure', '.NET', 'FSharp']
 
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.

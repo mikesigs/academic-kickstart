@@ -14,7 +14,7 @@ image = ""
 caption = ""
 preview = true
 
-draft = true
+draft = false
 +++
 
 In this series of posts I will walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.

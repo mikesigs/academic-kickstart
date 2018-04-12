@@ -26,7 +26,7 @@ weight = 5
 # Biography
 
 I've been doing software development for over ten years now. I've stayed pretty focused on
-.NET, building business apps with ASP.NET at the core. I spent a few years quite enamoured with Angular.JS, striving to be a unicorn, full-stack dev. More recently I've just been digging the backend, building microservice-based applications with NServiceBus in AwS.
+.NET, building business apps with ASP.NET at the core. I spent a few years quite enamoured with Angular.JS, striving to be a unicorn, full-stack dev. More recently I've just been digging the backend, building microservice-based applications with NServiceBus in AWS.
 
 One thing's for sure, I have a passion for learning, and a true love for code. I am happiest when exploring the nitty-gritty details of some new shiny technology, yet even moreso when sharing my knowledge with others.
 

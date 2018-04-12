@@ -2,7 +2,7 @@
 title = "Building Azure Functions With F# and VS Code - ## Setup Your Environment"
 date = 2018-03-08T22:32:30-07:00
 tags = ['Azure', 'F#', 'Azure Functions', 'Visual Studio Code']
-draft = true
+draft = false
 +++
 
 This is Step 1 in a [series of posts](../toc) where I will walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.

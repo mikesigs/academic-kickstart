@@ -1,7 +1,7 @@
 +++
 title = "Building Azure Functions With F# Script and Visual Studio Code - Step 2 - Create the Function App"
 date = 2018-04-12
-tags = ['Azure', 'F#', 'Azure Functions', 'Visual Studio Code']
+tags = ['Azure', 'FSharp', 'Azure Functions', 'Visual Studio Code']
 draft = false
 +++
 

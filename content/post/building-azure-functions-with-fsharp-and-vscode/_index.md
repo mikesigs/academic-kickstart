@@ -1,7 +1,7 @@
 +++
 title = "Building Azure Functions With F# Script and Visual Studio Code"
 date = 2018-04-12
-tags = ['Azure', 'F#', 'Azure Functions', 'Visual Studio Code']
+tags = ['Azure', 'FSharp', 'Azure Functions', 'Visual Studio Code']
 categories = ['Functional Programming', 'Serverless', 'Azure', '.NET', 'F#']
 
 # Featured image

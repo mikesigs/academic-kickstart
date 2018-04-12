@@ -20,7 +20,7 @@ weight = 5
 [[education.courses]]
   course = "BS in Computer Science"
   institution = "University of North Dakota"
-  year = 2013
+  year = 2003
 
 +++
 # Biography

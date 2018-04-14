@@ -57,7 +57,7 @@ defaultContentLanguageInSubdir = false
   description = "A well documented struggle for the perfect code"
 
   # Image used by Open Graph image meta tag
-  header_image = "headers/sad-man-walking.png"
+  header_image = "headers/nuclear-waste.png"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.

@@ -1,8 +1,13 @@
 +++
 title = "Building Azure Functions With F# Script and Visual Studio Code - Step 3 - Run the Function Locally"
+abstract = "Part 3 in a series of posts describing how to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools."
 date = 2018-04-12
 tags = ['Azure', 'FSharp', 'Azure Functions', 'Visual Studio Code']
 draft = false
+
+[header]
+image = "headers/high-speed-motion.png"
+preview = true
 +++
 
 This is Step 3 in a [series of posts](../) where I will walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.

@@ -53,6 +53,12 @@ defaultContentLanguageInSubdir = false
   name = "Mike Sigsworth"
   role = "Software Developer"
 
+  # Description of your site
+  description = "A well documented struggle for the perfect code"
+
+  # Image used by Open Graph image meta tag
+  header_image = "headers/sad-man-walking.png"
+
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
   organizations = [ { name = "Clear Measure", url = "https://www.clear-measure.com" } ]

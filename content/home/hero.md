@@ -24,4 +24,4 @@ weight = 1
 #  label = '<i class="fa fa-download"></i> Install Now'
 +++
 
-A well documented struggle for the perfect code.
+A well documented struggle for the perfect code

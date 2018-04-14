@@ -22,7 +22,7 @@
 
   {{/* Generate page image. */}}
   {{ $scr.Set "image" .Site.Params.header_image }}
-  {{ if .Params.header.image }}
+  {{ if isset .Params.header "image" }}
     {{ $scr.Set "image" .Params.header.image }}
   {{ end }}
   <meta name="description" content="{{ $scr.Get "description" }}">

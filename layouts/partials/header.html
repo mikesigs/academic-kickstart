@@ -22,10 +22,8 @@
 
   {{/* Generate page image. */}}
   {{ $scr.Set "image" .Site.Params.header_image }}
-  {{ if .IsPage }}
-    {{ if .Params.header.image }}
-      {{ $scr.Set "image" .Params.header.image }}
-    {{ end }}
+  {{ if .Params.header.image }}
+    {{ $scr.Set "image" .Params.header.image }}
   {{ end }}
   <meta name="description" content="{{ $scr.Get "description" }}">
 

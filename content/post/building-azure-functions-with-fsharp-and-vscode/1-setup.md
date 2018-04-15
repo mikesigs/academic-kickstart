@@ -59,10 +59,43 @@ We're going to be using v1.0 of the Core Tools in this series. The beta 2.0 vers
 
 One significant caveat to using v1.0 is it only runs on Windows. Sorry about that Mac/Linux users :disappointed:
 
-To install it, run:
+To install the Core Tools you have two options, [npm](https://www.npmjs.com/get-npm) or [Chocolatey](https://chocolatey.org/).
+
+#### Option 1: NPM
+
+npm is distributed with Node.js, so if you don't have Node installed that should be step one. Alternatively, you could use Chocolatey (see below).
+
+{{% alert note %}}
+I highly recommend you don't install Node directly. You should use [nvm-windows](https://github.com/coreybutler/nvm-windows),
+which allows multiple versions of Node to be installed simultaneously. Check the [GitHub](https://github.com/coreybutler/nvm-windows) page for installation instructions.
+
+It's not essential to use nvm-windows for this tutorial, but in my experience, it is often nice to be able to be able to switch between different node versions as the need arises.
+{{% /alert %}}
+
+Once you have Node installed, and thus npm, you can install the Core Tools with the following command:
 
 ```shell
 npm i -g azure-functions-core-tools
+```
+
+#### Option 2: Chocolatey
+
+Chocolatey is a package manager for Windows. It allows you to install _nearly_ anything from the command line. If you've never checked it out before then now would definitely be a good time.
+Head over to [the Chocolatey website](https://chocolatey.org/install) for installation instructions.
+
+{{% alert note %}}
+To give you some idea of how Chocolatey could improve your computering experience. When I have to do a fresh install on a new machine (which I've had to do 4 times this year. Long story...)
+I can install 90% of the things I need with a single command. I won't list everything I have installed, but as an example:
+
+`choco install 7zip azure-cli cmder diffmerge git gitkraken hub hugo linqpad lockhunter ngrok notepadplusplus ...`
+
+Chocolately then downloads and silently installs each of those programs.
+{{% /alert %}}
+
+Once you have Chocolatey installed, you can get the Core Tools with the following command:
+
+```shell
+choco install azure-functions-core-tools
 ```
 
 ### 5) Install the Azure Functions Extension

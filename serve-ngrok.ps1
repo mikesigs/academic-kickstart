@@ -11,4 +11,4 @@ while ($publicHttpsUrl -eq $null) {
     $content = ConvertFrom-Json $res.Content
     $publicHttpsUrl = $content.tunnels[1].public_url
 }
-hugo server -D --appendPort=false --baseURL=$publicHttpsUrl
+hugo server -Dw --appendPort=false --baseURL=$publicHttpsUrl

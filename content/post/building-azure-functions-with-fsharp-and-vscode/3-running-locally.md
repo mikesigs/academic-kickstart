@@ -6,7 +6,7 @@ tags = ['Azure', 'FSharp', 'Azure Functions', 'Visual Studio Code']
 draft = false
 
 [header]
-image = "headers/high-speed-motion.png"
+image = "headers/high-speed-motion.jpg"
 preview = true
 +++
 

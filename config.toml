@@ -57,14 +57,14 @@ defaultContentLanguageInSubdir = false
   description = "A well documented struggle for the perfect code"
 
   # Image used by Open Graph image meta tag
-  header_image = "headers/nuclear-waste.png"
+  header_image = "headers/nuclear-waste.jpg"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
   organizations = [ { name = "Clear Measure", url = "https://www.clear-measure.com" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "av1-glarefix.png"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "av1-glarefix.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "mikesigsworth@gmail.com"
   address = "Calgary, AB"
   office_hours = ""

@@ -7,7 +7,7 @@ tags = ['Azure', 'FSharp', 'Azure Functions', 'Visual Studio Code']
 categories = ['Functional Programming', 'Serverless', 'Azure', '.NET', 'FSharp']
 
 [header]
-image = "headers/high-speed-motion.png"
+image = "headers/high-speed-motion.jpg"
 caption = ""
 preview = true
 

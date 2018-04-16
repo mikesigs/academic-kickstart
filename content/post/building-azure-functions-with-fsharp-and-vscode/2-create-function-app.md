@@ -214,4 +214,4 @@ You will also notice that the logger isn't mentioned anywhere. And it doesn't ne
 
 Hooray! We have a function app... _aaand_ a function! 
 
-Let's move on to Step 3, and [Run the Function Locally](../3-running-locally/). We'll even toss a few test messages at it.
+Let's move on to [Step 3](../3-running-locally/), and Run the Function Locally. We'll even toss a few test messages at it.

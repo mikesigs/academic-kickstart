@@ -169,4 +169,4 @@ Why is the default template like this? That is a fantastic question!
 
 Great job so far! We have just successfully called our function locally, and sorted out a lame quirk in the default F# template.
 
-Let's move on to Step 4 and [Deploy the Function App to Azure](../4-deploy-to-azure/)!
+Let's move on to [Step 4](../4-deploy-to-azure/) and Deploy the Function App to Azure!

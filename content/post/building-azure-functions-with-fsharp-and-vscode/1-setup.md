@@ -109,4 +109,4 @@ Unfortunately, [we cannot create an F# project with it yet](https://github.com/M
 
 That's pretty much it. You're all setup!
 
-Now that you've got all the tools you need. Let's move on to Step 2 and [Create The Function App](../2-create-function-app/)!
+Now that you've got all the tools you need. Let's move on to [Step 2](../2-create-function-app/) and Create The Function App!

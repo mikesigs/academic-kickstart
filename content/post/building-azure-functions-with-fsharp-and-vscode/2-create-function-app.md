@@ -13,10 +13,10 @@ preview = true
 This is Step 2 in a [series of posts](../) where I will walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.
 I'll cover everything from what you need to install, all the way through creating the function, and deploying it to your Azure account.
 
-1. [Setup Your Environment](../1-setup)
-2. **[Create the Function App](../2-create-function-app)** :arrow_backward:
-3. [Run the Function Locally](../3-running-locally)
-4. [Deploy the Function App to Azure](../4-deploy-to-azure)
+1. [Setup Your Environment](../1-setup/)
+2. **[Create the Function App](../2-create-function-app/)** :arrow_backward:
+3. [Run the Function Locally](../3-running-locally/)
+4. [Deploy the Function App to Azure](../4-deploy-to-azure/)
 
 ## Create the Function App
 
@@ -111,7 +111,7 @@ open Microsoft.Azure.WebJobs.Host
 
 All credit goes to [Mikhail Shilkov](https://github.com/mikhailshilkov/) for [the above snippet of code](https://github.com/mikhailshilkov/azure-functions-fsharp-examples#4-function-created-with-cli). While Microsoft aludes to the need (and reason) for this ["editor prelude"](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-fsharp#editor-prelude), their suggested fix doesn't actually seem to resolve the problem. Mikhail's, on the other hand, does!
 
-Please note that since there were two options in [Step 1](1-setup#4-install-the-azure-functions-core-tools) for installing the Core Tools, you'll have to choose which assembly search path to use. Please also make sure that the path in my example actually exists on your machine. There's a chance it could vary, for several reasons. If you get stuck here, please leave a comment below.
+Please note that since there were two options in [Step 1](../1-setup/#4-install-the-azure-functions-core-tools) for installing the Core Tools, you'll have to choose which assembly search path to use. Please also make sure that the path in my example actually exists on your machine. There's a chance it could vary, for several reasons. If you get stuck here, please leave a comment below.
 
 {{% alert note %}}
 This messy prelude is only required when writing Azure Functions with F# Script (.fsx files). It is possible to use precompiled F# instead (.fs files) and this kludge goes away. However, all things have a cost. To work with precompiled F# means you'll likely want to use FAKE and Paket too. Once your function app reaches a certain level of complexity, it might be a good idea. But until then, F# Script is still the fastest way to write a simple function.
@@ -214,4 +214,4 @@ You will also notice that the logger isn't mentioned anywhere. And it doesn't ne
 
 Hooray! We have a function app... _aaand_ a function! 
 
-Let's move on to Step 3, and [Run the Function Locally](../3-running-locally). We'll even toss a few test messages at it.
+Let's move on to Step 3, and [Run the Function Locally](../3-running-locally/). We'll even toss a few test messages at it.

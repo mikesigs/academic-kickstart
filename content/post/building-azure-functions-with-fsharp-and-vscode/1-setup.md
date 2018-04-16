@@ -13,10 +13,10 @@ preview = true
 This is Step 1 in a [series of posts](../) where I will walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.
 I'll cover everything from what you need to install, all the way through creating the function, and deploying it to your Azure account.
 
-1. **[Setup Your Environment](../1-setup)** :arrow_backward:
-2. [Create the Function App](../2-create-function-app)
-3. [Run the Function Locally](../3-running-locally)
-4. [Deploy the Function App to Azure](../4-deploy-to-azure)
+1. **[Setup Your Environment](../1-setup/)** :arrow_backward:
+2. [Create the Function App](../2-create-function-app/)
+3. [Run the Function Locally](../3-running-locally/)
+4. [Deploy the Function App to Azure](../4-deploy-to-azure/)
 
 ## Setup Your Environment
 
@@ -109,4 +109,4 @@ Unfortunately, [we cannot create an F# project with it yet](https://github.com/M
 
 That's pretty much it. You're all setup!
 
-Now that you've got all the tools you need. Let's move on to Step 2 and [Create The Function App](../2-create-function-app)!
+Now that you've got all the tools you need. Let's move on to Step 2 and [Create The Function App](../2-create-function-app/)!

@@ -13,10 +13,10 @@ preview = true
 This is Step 3 in a [series of posts](../) where I will walk you through the steps required to create a simple Azure Function using F# Script, VS Code, and v1 of the Azure Functions Core Tools.
 I'll cover everything from what you need to install, all the way through creating the function, and deploying it to your Azure account.
 
-1. [Setup Your Environment](../1-setup)
-2. [Create the Function App](../2-create-function-app)
-3. **[Run the Function Locally](../3-running-locally)** :arrow_backward:
-4. [Deploy the Function App to Azure](../4-deploy-to-azure)
+1. [Setup Your Environment](../1-setup/)
+2. [Create the Function App](../2-create-function-app/)
+3. **[Run the Function Locally](../3-running-locally/)** :arrow_backward:
+4. [Deploy the Function App to Azure](../4-deploy-to-azure/)
 
 ## Run the Function Locally
 
@@ -169,4 +169,4 @@ Why is the default template like this? That is a fantastic question!
 
 Great job so far! We have just successfully called our function locally, and sorted out a lame quirk in the default F# template.
 
-Let's move on to Step 4 and [Deploy the Function App to Azure](../4-deploy-to-azure)!
+Let's move on to Step 4 and [Deploy the Function App to Azure](../4-deploy-to-azure/)!

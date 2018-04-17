@@ -4,6 +4,7 @@ abstract = "Part 3 in a series of posts describing how to create a simple Azure 
 date = 2018-04-12
 tags = ['Azure', 'FSharp', 'Azure Functions', 'Visual Studio Code']
 draft = false
+github = "https://github.com/mikesigs/building-azure-functions-with-fsharp-and-vscode"
 
 [header]
 image = "headers/high-speed-motion.jpg"

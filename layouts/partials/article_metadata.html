@@ -42,6 +42,11 @@
   {{ end }}
   {{ end }}
 
+  {{ if isset $.Params "github" }}
+  <span class="middot-divider"></span>
+  <a href="{{ $.Params.github}}{{ . | urlize | lower }}" target="_blank">View on GitHub <i class="fa fa-github"></i></a>
+  {{ end }}
+  
   {{ if ne $is_list 1 }}
   {{ partial "share.html" $ }}
   {{ end }}

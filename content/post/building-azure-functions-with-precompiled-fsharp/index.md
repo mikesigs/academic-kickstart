@@ -99,3 +99,5 @@ _NOW_ you can start the function host again and everything should be hunky dory.
 - Add logging
 - Make it POST and parse some JSON out of the `req.Body`
 - Add some error handle, note the need for `:> IActionResult`
+- Create a `Functions.fs` file to contain the attributed functions, put the meat of the functions somewhere else
+- Talk about the compiled output (the function.json files)

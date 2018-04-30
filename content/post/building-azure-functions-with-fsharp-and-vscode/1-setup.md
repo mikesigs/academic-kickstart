@@ -27,7 +27,7 @@ Let's get your machine properly setup! You will need the following:
 
 ### 1) Install Visual Studio Code
 
-This seems like a no brainer. But if you don't already have it, install [Visual Studio Code](https://code.visualstudio.com/).
+This seems like a no-brainer. But if you don't already have it, install [Visual Studio Code](https://code.visualstudio.com/).
 
 ### 2) Install F\#
 
@@ -41,8 +41,7 @@ Use the Visual Studio Code Extensions Marketplace to install them. Just click th
 
 #### [Ionide-fsharp](https://github.com/ionide/ionide-vscode-fsharp)
 
-For F# intellisense, document formatting, syntax and error highlighting, and more. It also provides project scaffolding using a tool called [Forge](http://fsharp-editing.github.io/For
-ge/).
+For F# intellisense, document formatting, syntax and error highlighting, and more. It also provides project scaffolding using a tool called [Forge](http://fsharp-editing.github.io/Forge/).
 
 #### [Ionide-Paket]([Ionide Paket](https://github.com/ionide/ionide-vscode-paket))
 
@@ -90,7 +89,7 @@ I can install 90% of the things I need with a single command. I won't list every
 
 `choco install 7zip azure-cli cmder diffmerge git gitkraken hub hugo linqpad lockhunter ngrok notepadplusplus ...`
 
-Chocolately then downloads and silently installs each of those programs.
+Chocolatey then downloads and silently installs each of those programs.
 {{% /alert %}}
 
 Once you have Chocolatey installed, you can get the Core Tools with the following command:

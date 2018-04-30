@@ -13,13 +13,13 @@ preview = true
 
 Previously we looked at [Building Azure Functions with F# Script](../building-azure-functions-with-fsharp-and-vscode), which is still the only _supported_ way of creating an Azure Function with F#, but a decent option for simple functions. So, if you'd like to be safe (and stable) then that's still your best bet. However, in this post we are going to take a trip to the edge. We'll be using .NET Core, Azure Functions Core Tools v2, and F#. However, instead of F# _Script_ we'll be creating a _precompiled_ app!
 
-Being on the bleeding edge has its drawbacks however. Chances are we're going to see some bugs. The Core Tools are in beta afterall, so that should be expected. I will explain how I work around the current issues, but chances are things will change between now and the time you read this. So if you _don't_ encounter an issue we're solving here, that's fantastic. It means Azure Functions with F# is moving in the right direction overall.
+Being on the bleeding edge has its drawbacks however. Chances are we're going to see some bugs. The Core Tools are in beta after all, so that should be expected. I will explain how I work around the current issues, but chances are things will change between now and the time you read this. So if you _don't_ encounter an issue we're solving here, that's fantastic. It means Azure Functions with F# is moving in the right direction overall.
 
 So without further ado, let's get started!
 
 ## Setup Your Environment
 
-You can follow the same instructions [from my previous post](../building-azure-functions-with-fsharp-and-vscode/1-setup/) to get setup, _with one exeception_. You will need to install v2 instead of v1 of the Azure Functions Core Tools. I would recommend you install it with npm instead of Chocolatey. I had some issues using the Chocolatey version and never got to the bottom of it.
+You can follow the same instructions [from my previous post](../building-azure-functions-with-fsharp-and-vscode/1-setup/) to get setup, _with one exception_. You will need to install v2 instead of v1 of the Azure Functions Core Tools. I would recommend you install it with npm instead of Chocolatey. I had some issues using the Chocolatey version and never got to the bottom of it.
 
 To install v2 of the Core Tools use this command:
 
@@ -58,7 +58,7 @@ The C# template is configured for making Azure Functions development in VS Code 
 
 #### extensions.json
 
-This file tells VS Code what extensions to recommend for the project. Obvioulsy, we won't be needing the **ms-vscode.csharp** extesion, so you can remove it.
+This file tells VS Code what extensions to recommend for the project. Obviously, we won't be needing the **ms-vscode.csharp** extension, so you can remove it.
 
 #### launch.json
 
@@ -70,7 +70,7 @@ This is where you customize VS Code's workspace settings. In this case, there's 
 
 #### tasks.json
 
-Last, _but certainly not least,_ are the three tasks that allow you to **clean**, **build**, and **run** your Function App from the VS Code Command Pallete. Or, if you prefer, using keyboard shortcuts.
+Last, _but certainly not least,_ are the three tasks that allow you to **clean**, **build**, and **run** your Function App from the VS Code Command Palette. Or, if you prefer, using keyboard shortcuts.
 
 - **build:** `Ctrl+Shift+B`.
 - **Run Functions Host:** `Ctrl+Shift+R` ([a custom keybinding](/post/building-azure-functions-with-fsharp-and-vscode/3-running-locally/#create-a-custom-keybinding))
@@ -81,7 +81,7 @@ If you attempt to build the app now, you might see the following warning in the 
 
 > warning NU1701: Package 'Microsoft.AspNet.WebApi.Client 5.2.2' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.
 
-To fix this, we'll need to update our version of **Microsoft.NET.Sdk.Functions**. Open the Command Pallete and invoke `Nuget Package Manager: Add Package` and search for **Microsoft.NET.Sdk.Functions**. Select the latest version and continue. When I wrote this, the latest version was **1.0.13**.
+To fix this, we'll need to update our version of **Microsoft.NET.Sdk.Functions**. Open the Command Palette and invoke `NuGet Package Manager: Add Package` and search for **Microsoft.NET.Sdk.Functions**. Select the latest version and continue. When I wrote this, the latest version was **1.0.13**.
 
 Once that completes you should be able to build without warnings.
 
@@ -152,7 +152,7 @@ open Microsoft.AspNetCore.Http
 module Functions =
 
     [<FunctionName("HelloYou")>]
-    let helloYou ([<HttpTrigger(Extensions.Http.AuthorizationLevel.Anonymous, "get", Route = "hello")>] req: HttpRequest) 
+    let helloYou ([<HttpTrigger(Extensions.Http.AuthorizationLevel.Anonymous, "get", Route = "hello")>] req: HttpRequest)
         = HelloYou.run req
 ```
 
@@ -193,7 +193,7 @@ Now that we've got things running, and we've shunted our attributes to a separat
 
 ### Changes to Functions.fs
 
-W're going to add some logging to our function. So we'll need to add a `log: TraceWriter` parameter to our function declartion. We're also going to use HTTP POST instead of GET, so we'll need to update the list of supported `methods`.
+We're going to add some logging to our function. So we'll need to add a `log: TraceWriter` parameter to our function declaration. We're also going to use HTTP POST instead of GET, so we'll need to update the list of supported `methods`.
 
 Our `Functions.fs` now looks like this:
 
@@ -309,6 +309,8 @@ Two other properties, essential to a precompiled app, are listed at the end:
 
 We covered a ton of ground on this one! Working with Pre-Compiled apps gives us a ton of flexibility. Also, we didn't need that weird [Editor Prelude](../building-azure-functions-with-fsharp-and-vscode/2-create-function-app/#holy-squigglies) thing. But we did lose the slickness of auto-reloading on changes that is supported by F# (and C#) Script. The good news is, that's been implemented already and will likely be included in the next beta release of the core tools!
 
-Why not try [deploying this to your Azure account](../building-azure-functions-with-fsharp-and-vscode/4-deploy-to-azure/). Oh, and try attaching the debugger to your function! Just run the function, set a breakpoint, and press `F5`. Super easy!
+Why not try [deploying this to your Azure account](../building-azure-functions-with-fsharp-and-vscode/4-deploy-to-azure/). Once you do, notice that none of the code is editable in the Azure Portal. That's because it's a precompiled app. The only thing you'll see there is the generated `function.json`.
+
+Oh, and try attaching the debugger to your function! Just run the function, set a breakpoint, and press `F5`. Super easy!
 
 That's it for now. And thanks for reading!

@@ -73,7 +73,7 @@ Head back over to Postman. Now, let's simply replace the localhost URL with the 
 
 ## What's Next
 
-We made it! You now have an Azure Function app, deployed to Azure, that can say "Hi". 
+We made it! You now have an Azure Function app, deployed to Azure, that can say "Hi".
 
 That's great and all, but you can do so much more!
 

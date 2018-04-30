@@ -25,7 +25,7 @@ So you've got your function created and you want to test it out. First thing of 
 
 You can do this on the CLI with the command: `func host start`. Or you can leverage one of the goodies the Azure Functions extension provided us.
 
-Remember when you first opened the project and you were prompted to _Initialize for optimal use with VS Code_? Part of that process created a `Tasks.json` file in the `.vscode` folder in your workspace. 
+Remember when you first opened the project and you were prompted to _Initialize for optimal use with VS Code_? Part of that process created a `Tasks.json` file in the `.vscode` folder in your workspace.
 It contains a task to let you to start the Azure Functions Host without leaving VS Code.
 
 ```json
@@ -146,13 +146,13 @@ let Run(req: HttpRequestMessage, log: TraceWriter) =
         let! jsonContent = req.Content.ReadAsStringAsync() |> Async.AwaitTask
 
         let jsonFormatter = System.Net.Http.Formatting.JsonMediaTypeFormatter()
-        jsonFormatter.SerializerSettings.ContractResolver 
+        jsonFormatter.SerializerSettings.ContractResolver
             <- Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
 
         try
             let name = JsonConvert.DeserializeObject<Name>(jsonContent)
             return req.CreateResponse(
-                HttpStatusCode.OK, 
+                HttpStatusCode.OK,
                 { Greeting = sprintf "Hello %s %s!" name.First name.Last },
                 jsonFormatter)
         with _ ->

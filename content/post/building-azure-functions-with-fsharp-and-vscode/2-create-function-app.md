@@ -44,7 +44,7 @@ You should now be greeted by the following prompt from the Azure Functions exten
 ![Detected Azure Functions Project Prompt](../img/detected-azure-functions-project-prompt.png)
 
 Click **Yes** and [all of this will be yours](https://github.com/Microsoft/vscode-azurefunctions/blob/master/docs/project.md)!
-Granted, it's not _as_ benefitical for an F# project, but I still think it's worth it for the `Tasks.json` alone.
+Granted, it's not _as_ beneficial for an F# project, but I still think it's worth it for the `Tasks.json` alone.
 
 After clicking **Yes**, VS Code will prompt you to select the default language for your project. Please select `F#Script`.
 
@@ -110,7 +110,7 @@ open Microsoft.Azure.WebJobs.Host
 #endif
 ```
 
-All credit goes to [Mikhail Shilkov](https://github.com/mikhailshilkov/) for [the above snippet of code](https://github.com/mikhailshilkov/azure-functions-fsharp-examples#4-function-created-with-cli). While Microsoft aludes to the need (and reason) for this ["editor prelude"](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-fsharp#editor-prelude), their suggested fix doesn't actually seem to resolve the problem. Mikhail's, on the other hand, does!
+All credit goes to [Mikhail Shilkov](https://github.com/mikhailshilkov/) for [the above snippet of code](https://github.com/mikhailshilkov/azure-functions-fsharp-examples#4-function-created-with-cli). While Microsoft alludes to the need (and reason) for this ["editor prelude"](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-fsharp#editor-prelude), their suggested fix doesn't actually seem to resolve the problem. Mikhail's, on the other hand, does!
 
 Please note that since there were two options in [Step 1](../1-setup/#4-install-the-azure-functions-core-tools) for installing the Core Tools, you'll have to choose which assembly search path to use. Please also make sure that the path in my example actually exists on your machine. There's a chance it could vary, for several reasons. If you get stuck here, please leave a comment below.
 
@@ -145,7 +145,6 @@ type Greeting = {
 
 Then there's the actual `Run` function:
 
-
 ```fsharp
 let Run(req: HttpRequestMessage, log: TraceWriter) =
     async {
@@ -174,7 +173,7 @@ Within the async workflow it:
 - Asynchronously reads the body of our http request into `jsonContent`
 - Uses Json.NET to deserialize `jsonContent` into a `Name` typed binding
 - If all goes well it returns a `Task<HttpResponseMessage>` with status 200, and some JSON expressing our sincerest greetings to the calling client
-- If the JSON deserialization goes horrible awry, then it returns a 400 BadRequest with absolutely no detail whatsover. Because hackers.
+- If the JSON deserialization goes horrible awry, then it returns a 400 BadRequest with absolutely no detail whatsoever. Because hackers.
 - Finally, at the very end it's all piped into the `Async.StartAsTask` function to begin the async workflow
 
 I must say, it's not the most idiomatic F# code in the world, but it gets the job done.
@@ -213,6 +212,6 @@ You will also notice that the logger isn't mentioned anywhere. And it doesn't ne
 
 ## What's Next
 
-Hooray! We have a function app... _aaand_ a function! 
+Hooray! We have a function app... _aaand_ a function!
 
 Let's move on to [Step 3](../3-running-locally/), and Run the Function Locally. We'll even toss a few test messages at it.

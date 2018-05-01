@@ -126,7 +126,7 @@ The `FunctionName` attribute marks this as a function entry point. This name mus
 
 All functions need to be triggered somehow. In our case, we're using the `HttpTrigger` attribute to indicate this function is triggered by an HTTP call. It takes several parameters:
 
-- **authLevel:** Set's the [authorization level](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook#authorization-keys) for the function, i.e. what keys need to be provided to invoke the function.
+- **authLevel:** Sets the [authorization level](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook#authorization-keys) for the function, i.e. what keys need to be provided to invoke the function.
 - **methods:** Indicates which HTTP verbs the function is triggered by. In our case we're just using GET
 - **route:** The route to our function
 

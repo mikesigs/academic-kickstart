@@ -11,15 +11,15 @@ image = "headers/blue-and-pink-css-code.jpg"
 preview = true
 +++
 
-Previously we looked at [Building Azure Functions with F# Script](../building-azure-functions-with-fsharp-and-vscode), which is still the only _supported_ way of creating an Azure Function with F#, but a decent option for simple functions. So, if you'd like to be safe (and stable) then that's still your best bet. However, in this post we are going to take a trip to the edge. We'll be using .NET Core, Azure Functions Core Tools v2, and F#. However, instead of F# _Script_ we'll be creating a _precompiled_ app!
+Previously we looked at [Building Azure Functions with F# Script](../building-azure-functions-with-fsharp-and-vscode), which is still the only _supported_ way of creating an Azure Function with F#, and a decent option for simple functions. So, if you need to play it safe (and stable) then that's your best bet. However, in this post we are going to take a trip to the edge. We'll be using .NET Core, Azure Functions Core Tools v2, and F#. However, instead of F# _Script_ we'll be creating a _precompiled_ app!
 
-Being on the bleeding edge has its drawbacks however. Chances are we're going to see some bugs. The Core Tools are in beta after all, so that should be expected. I will explain how I work around the current issues, but chances are things will change between now and the time you read this. So if you _don't_ encounter an issue we're solving here, that's fantastic. It means Azure Functions with F# is moving in the right direction overall.
+Being on the bleeding edge has its drawbacks however. Chances are we're going to see some bugs. The Core Tools are in beta after all, so that should be expected. I will explain how I work around the current issues, but chances are things will change between now and the time you read this. So if you _don't_ encounter an issue we're solving here, that's fantastic. It means Azure Functions with F# is moving in the right direction!
 
-So without further ado, let's get started!
+So without further ado, let's get started.
 
 ## Setup Your Environment
 
-You can follow the same instructions [from my previous post](../building-azure-functions-with-fsharp-and-vscode/1-setup/) to get setup, _with one exception_. You will need to install v2 instead of v1 of the Azure Functions Core Tools. I would recommend you install it with npm instead of Chocolatey. I had some issues using the Chocolatey version and never got to the bottom of it.
+If you're not already setup for F# Azure Functions development, you can follow the same instructions [from my previous post](../building-azure-functions-with-fsharp-and-vscode/1-setup/), _with one exception_. You will need to install v2 instead of v1 of the Azure Functions Core Tools. I would recommend you install it with npm instead of Chocolatey. I had some issues using the Chocolatey version and never got to the bottom of it.
 
 To install v2 of the Core Tools use this command:
 
@@ -29,10 +29,10 @@ npm i -g azure-functions-core-tools@core --unsafe-perm true
 
 Also, did I say "one exception"? I meant two. You'll also need to [install the .NET Core SDK](https://www.microsoft.com/net/learn/get-started/windows#install).
 
-Okay... _three_. Sheesh. I'm also going to use the [NuGet Package Manager](https://github.com/jmrog/vscode-nuget-package-manager) extension in Visual Studio Code, so you might as well install that now too.
+Okay... _three_. Sheesh. I'm also going to use the [NuGet Package Manager](https://github.com/jmrog/vscode-nuget-package-manager) extension in Visual Studio Code, so you might as well install that now as well.
 
 {{% alert note %}}
-  You could use Paket to manage the dependencies instead of NuGet. It's far more popular within the F# community. But I want to limit the number of new technologies you have to learn in these posts. I'll get to Paket one day.
+  You could use Paket to manage the dependencies instead of NuGet. It's far more popular within the F# community. But I want to limit the number of new technologies for newcomers to F# in these posts. I'll get to Paket one day.
 {{% /alert %}}
 
 ## Create The Function App
@@ -48,7 +48,7 @@ Now that you have what you need, let's create our app. There is no F# template a
 
 You now have an empty Function App, initialized as a git repository. There's a `.gitignore` file tailor-made for Azure Functions development.
 
-The first this we should do is rename the `.csproj` to `.fsproj`. While you're in there, notice that we're using the new project file format, as well as `netstandard2.0`.
+The first thing we should do is rename the `.csproj` to `.fsproj`. While you're in there, notice that we're using the new project file format, as well as `netstandard2.0`.
 
 Besides the Git repo and project file, there are actually quite a few goodies nestled in the `.vscode` folder.
 
@@ -70,10 +70,10 @@ This is where you customize VS Code's workspace settings. In this case, there's 
 
 #### tasks.json
 
-Last, _but certainly not least,_ are the three tasks that allow you to **clean**, **build**, and **run** your Function App from the VS Code Command Palette. Or, if you prefer, using keyboard shortcuts.
+Last, _but certainly not least,_ are the three tasks that allow you to **clean**, **build**, and **run** your Function App from the VS Code Command Palette. Or, if you prefer, using the following keyboard shortcuts:
 
 - **build:** `Ctrl+Shift+B`.
-- **Run Functions Host:** `Ctrl+Shift+R` ([a custom keybinding](/post/building-azure-functions-with-fsharp-and-vscode/3-running-locally/#create-a-custom-keybinding))
+- **Run Functions Host:** `Ctrl+Shift+R` (with a [custom keybinding](/post/building-azure-functions-with-fsharp-and-vscode/3-running-locally/#create-a-custom-keybinding))
 
 ## If You Build It, They Will... Oh
 
@@ -91,7 +91,7 @@ As mentioned above, there are no F# templates yet. So the Azure Functions extens
 
 We will use the new **Attributed Model** to define our function. This means we don't have to manage the `function.json` file anymore. It's generated at compile time based on the attributes! Full disclosure, the attributes are kinda ugly, but we'll explore [a strategy to deal with that](./#let-s-deal-with-those-attributes) later.
 
-Like [last time](../building-azure-functions-with-fsharp-and-vscode/2-create-function-app/), we're going to create an **HttpTrigger** function called **HelloYou**. Start by create a new file at the root of your project called `HelloYou.fs`. You'll have to add a reference to the new file in your `.fsproj`. The Ionide plugin provides a quick way to do this via the `F#: Add Current File To Project` command. However, when I wrote this it wasn't working. So make sure you check the project file contains the following section:
+Like [last time](../building-azure-functions-with-fsharp-and-vscode/2-create-function-app/), we're going to create an **HttpTrigger** function called **HelloYou**. Start by create a new file at the root of your project called `HelloYou.fs`. You'll have to add a reference to the new file in your `.fsproj`. The Ionide plugin provides a quick way to do this via the `F#: Add Current File To Project` command. However, when I wrote this it wasn't working. So make sure to check the project file has this added to it:
 
 ```xml
   <ItemGroup>
@@ -114,7 +114,21 @@ module HelloYou =
         ContentResult(Content = "Hello", ContentType = "text/html")
 ```
 
-Check out those ugly attributes! It's worth it though to not have to maintain a `function.json`.
+### Check out those ugly attributes
+
+Personally, I think the attributes are kinda ugly. But their inner beauty is not have to maintain a `function.json`. Let's take a quick peak at the two we're using here.
+
+#### FunctionName
+
+The `FunctionName` attribute marks this as a function entry point. This name must be unique within your Function App. It also let's you name the function in code whatever you want, e.g. `run`.
+
+#### HttpTrigger
+
+All functions need to be triggered somehow. In our case, we're using the `HttpTrigger` attribute to indicate this function is triggered by an HTTP call. It takes several parameters:
+
+- **authLevel:** Set's the [authorization level](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook#authorization-keys) for the function, i.e. what keys need to be provided to invoke the function.
+- **methods:** Indicates which HTTP verbs the function is triggered by. In our case we're just using GET
+- **route:** The route to our function
 
 ## If You Run It, They Will... Oh
 
@@ -129,7 +143,7 @@ This is caused by an assembly version mismatch in the Azure Functions Core Tools
 
 Stop the Function Host if it's still running (press `Ctrl+C` in the terminal). Then invoke the `NuGet Package Manager: Add Package` command and find `FSharp.Core`. Install version **4.2.3**. Once complete you should see a new `PackageReference` in the `.fsproj` for **FSharp.Core**.
 
-## If You Run It, It Will... Run
+## If You Run It, It Will... Run!
 
 Okay, _NOW_ you can start the function host and everything should be just hunky dory. If you `Ctrl+Click` the HelloYou link <http://localhost:7071/api/hello> in the terminal window your browser should open up a page that says "Hello".
 
@@ -298,7 +312,7 @@ Without the function attributes we would've needed to create and maintain a `fun
 }
 ```
 
-Notice that it calls out the fact it's a generated file with the `generatedBy` property. And check out those bindings. You can see in the `req` binding it lists the only method supported is "post", and the `authLevel` we specified is set to "anonymous". It's got our `route` specified there as well.
+Notice that it calls out the fact it's a generated file with the `generatedBy` property. And check out those bindings. You can see in the `req` binding it lists the only method supported is **post**, and the `authLevel` we specified is set to **anonymous**. It's got our `route` specified there as well.
 
 Two other properties, essential to a precompiled app, are listed at the end:
 

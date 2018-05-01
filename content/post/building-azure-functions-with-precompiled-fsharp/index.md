@@ -116,7 +116,7 @@ module HelloYou =
 
 ### Check out those ugly attributes
 
-Personally, I think the attributes are kinda ugly. But their inner beauty is not have to maintain a `function.json`. Let's take a quick peak at the two we're using here.
+Personally, I think the attributes are kinda ugly. But their inner beauty is not have to maintain a `function.json`. Let's take a quick peek at the two we're using here.
 
 #### FunctionName
 

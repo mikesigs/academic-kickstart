@@ -110,8 +110,10 @@ open Microsoft.AspNetCore.Mvc
 
 module HelloYou =
     [<FunctionName("HelloYou")>]
-    let run ([<HttpTrigger(Extensions.Http.AuthorizationLevel.Anonymous, "get", Route = "hello")>] req: HttpRequest) =
-        ContentResult(Content = "Hello", ContentType = "text/html")
+    let run
+        ([<HttpTrigger(Extensions.Http.AuthorizationLevel.Anonymous, "get", Route = "hello")>]
+        req: HttpRequest) =
+            ContentResult(Content = "Hello", ContentType = "text/html")
 ```
 
 ### Check out those ugly attributes
@@ -166,8 +168,10 @@ open Microsoft.AspNetCore.Http
 module Functions =
 
     [<FunctionName("HelloYou")>]
-    let helloYou ([<HttpTrigger(Extensions.Http.AuthorizationLevel.Anonymous, "get", Route = "hello")>] req: HttpRequest)
-        = HelloYou.run req
+    let helloYou
+        ([<HttpTrigger(Extensions.Http.AuthorizationLevel.Anonymous, "get", Route = "hello")>]
+        req: HttpRequest) =
+            HelloYou.run req
 ```
 
 ### fsproj
@@ -222,11 +226,10 @@ module Functions =
 
     [<FunctionName("HelloYou")>]
     let helloYou
-        (
-            [<HttpTrigger(Extensions.Http.AuthorizationLevel.Anonymous, "post", Route = "hello")>] req: HttpRequest,
-            log: TraceWriter
-        )
-        = HelloYou.run req log
+        ([<HttpTrigger(Extensions.Http.AuthorizationLevel.Anonymous, "post", Route = "hello")>]
+        req: HttpRequest,
+        log: TraceWriter) =
+            HelloYou.run req log
 ```
 
 ### Changes to HelloYou.fs

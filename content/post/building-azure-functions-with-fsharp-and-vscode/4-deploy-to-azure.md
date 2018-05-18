@@ -58,7 +58,9 @@ You'll see the progress of creating your resources in the Output panel. What we 
 ```shell
 >>>>>> Deployment to "mikesigs-HelloYou" completed. <<<<<<
 
-WARNING: Some http trigger urls cannot be displayed in the output window because they require an authentication token. Instead, you may copy them from the Azure Functions explorer.
+WARNING: Some http trigger urls cannot be displayed in the output window because they
+require an authentication token. Instead, you may copy them from the Azure Functions
+explorer.
 ```
 
 Notice that warning though. We'll need a special URL to call our deployed function, one that includes a token parameter. The Azure Functions extension makes this super easy to get.

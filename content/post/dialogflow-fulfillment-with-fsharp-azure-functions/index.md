@@ -1,7 +1,7 @@
 +++
 title = "DialogFlow Fulfillment With Azure Functions and F#"
 date = 2018-05-17T23:24:38-06:00
-draft = false
+draft = true
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
